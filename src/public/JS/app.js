@@ -1,4 +1,4 @@
-//variables globales
+aa//variables globales
 const formularioUI = document.querySelector('#formulario')
 const listaActividadesUI = document.getElementById('listaActividades')
 let arrayActividades = []
@@ -42,9 +42,9 @@ const pintarDB = () => {
 
 const eliminarDB = (actividad)=>{
     let indexArray ;
-    arrayActividades.forEach((elemento, index)=>{
+    arrayActividades.forEach((elemento, i)=>{
         if (elemento.actividad == actividad) {
-            indexArray = index;
+            indexArray = i;
         }
         
     })
@@ -66,8 +66,12 @@ formularioUI.addEventListener('submit', (e)=>{
     e.preventDefault()
     let actividadUI = document.getElementById('actividad').value
     let id = 0;
+    for (let i = 0; i < id; i++) {
+        id++   
+    }
+
     crearItem(actividadUI)
-    id++
+    
     console.log(id);
     guardarDB() 
     formularioUI.reset();
